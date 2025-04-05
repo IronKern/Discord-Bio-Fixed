@@ -1,6 +1,6 @@
 body {
-    background-color: black; /* Hintergrund der Seite schwarz */
-    color: white; /* Standardtextfarbe weiß */
+    background-color: black; 
+    color: white; 
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -24,7 +24,7 @@ section {
 }
 
 
-/* Dynamic Island Bubbles */
+
 .dynamic-island-container {
     display: flex;
     flex-direction: column;
@@ -34,8 +34,8 @@ section {
 }
 
 .dynamic-island {
-    background-color: white; /* Bubbles weiß */
-    color: black; /* Text in den Bubbles schwarz */
+    background-color: white; 
+    color: black; 
     padding: 10px 20px;
     border-radius: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -45,15 +45,15 @@ section {
     animation: float 3s ease-in-out infinite;
 }
 .rounded-container {
-    background-color: #808080; /* Grauer Hintergrund */
-    color: white; /* Textfarbe */
-    padding: 0px; /* Innenabstand */
-    border-radius: 25px; /* Abgerundete Ecken */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Schatten */
-    max-width: 90%; /* Maximale Breite des Behälters */
-    margin: 20px auto 0; /* Abstand nach oben und zentriert */
-    position: relative; /* Position für Schatten der Bubbles */
-    z-index: 0; /* Behälter liegt unter den Bubbles */
+    background-color: #808080; 
+    color: white; 
+    padding: 0px; 
+    border-radius: 25px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); 
+    max-width: 90%; 
+    margin: 20px auto 0; 
+    position: relative; 
+    z-index: 0; 
 }
 
 
@@ -68,21 +68,21 @@ section {
 .circle-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Abstand nach oben */
+    margin-top: 20px; 
 }
 
 .circle-image {
-    width: 50px; /* Breite des Kreises */
-    height: 50px; /* Höhe des Kreises */
-    border-radius: 50%; /* Macht das Bild rund */
-    object-fit: cover; /* Passt das Bild an den Kreis an */
-    border: 3px solid white; /* Optional: Weißer Rand um das Bild */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional: Schatten */
+    width: 50px; 
+    height: 50px; 
+    border-radius: 50%; 
+    object-fit: cover; 
+    border: 3px solid white; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
     
 }.dynamic-icon {
-    width: 40px; /* Breite des Icons */
-    height: 40px; /* Höhe des Icons */
-    object-fit: cover; /* Passt das Bild an die Größe an */
-    border-radius: 50%; /* Optional: Macht das Icon rund */
-    margin: 5px; /* Abstand innerhalb des Behälters */
+    width: 40px; 
+    height: 40px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    margin: 5px; 
 }
