@@ -8,9 +8,9 @@
 </head>
 <body>
     <header>
-        <h1>Willkommen</h1>
-        <h2>ich komme aus Elmshorn</h2>
-        <h3>Deutschland</h3>
+        <h1>welcome</h1>
+        <h3>just me doing things</h3>
+        <h3>based in <span id="flag">🇩🇪</span></h3>
     </header>
 
 
@@ -48,5 +48,67 @@
         </section>
 
     </footer>
+    
+    <script>
+        let clickCount = 0;
+    
+        // Funktion, um fallende Flaggen zu erstellen
+        function createFallingFlags() {
+            const flagContainer = document.createElement('div');
+            flagContainer.style.position = 'fixed';
+            flagContainer.style.top = '0';
+            flagContainer.style.left = '0';
+            flagContainer.style.width = '100%';
+            flagContainer.style.height = '100%';
+            flagContainer.style.pointerEvents = 'none';
+            flagContainer.style.overflow = 'hidden';
+            document.body.appendChild(flagContainer);
+    
+            for (let i = 0; i < 50; i++) {
+                const flag = document.createElement('div');
+                flag.textContent = '🇩🇪';
+                flag.style.position = 'absolute';
+                flag.style.fontSize = `${Math.random() * 20 + 20}px`;
+                flag.style.left = `${Math.random() * 100}%`;
+                flag.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+                flag.style.top = '-50px';
+                flagContainer.appendChild(flag);
+    
+                // Entferne die Flagge nach der Animationsdauer
+                flag.addEventListener('animationend', () => {
+                    flag.remove();
+                });
+            }
+    
+            // Entferne den Container nach 6 Sekunden (wenn alle Flaggen gefallen sind)
+            setTimeout(() => {
+                document.body.removeChild(flagContainer);
+            }, 6000);
+        }
+    
+        // Event-Listener für die Deutschland-Flagge
+        document.getElementById('flag').addEventListener('click', () => {
+            clickCount++;
+            if (clickCount === 10) {
+                createFallingFlags();
+                clickCount = 0; // Zurücksetzen des Zählers
+            }
+        });
+    
+        // CSS für die Animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                0% {
+                    transform: translateY(0);
+                }
+                100% {
+                    transform: translateY(100vh);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
 </body>
 </html>
